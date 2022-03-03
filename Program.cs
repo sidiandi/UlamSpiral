@@ -1,4 +1,4 @@
-﻿const int size = 3;
+﻿const int size = 40;
 
 // apply sieve of erastosthenes
 var count = size * size;
@@ -30,10 +30,12 @@ for (int i = 1; i < count + 1; i++)
 // output
 for (int y= 0; y<size; y++)
 {
+    Console.Write($"{y:D2}|");
     for (int x = 0; x < size; x++)
     {
         Console.Write(canvas[y, x] ? "X" : " ");
     }
+    Console.Write("|");
     Console.WriteLine();
 }
 
